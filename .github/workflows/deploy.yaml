@@ -10,8 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-      - run: docker build -t stephengrider/multi-client ./client
-      - run: docker build -t stephengrider/multi-nginx ./nginx
-      - run: docker build -t stephengrider/multi-server ./server
-      - run: docker build -t stephengrider/multi-worker ./worker
-      - run: docker run -e CI=true cygnetops/react-test npm test -- --coverage
+      - run: docker build -t vetrax/multi-client ./client
+      - run: docker build -t vetrax/multi-nginx ./nginx
+      - run: docker build -t vetrax/multi-server ./server
+      - run: docker build -t vetrax/multi-worker ./worker
