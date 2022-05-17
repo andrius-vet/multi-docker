@@ -15,7 +15,7 @@ jobs:
       - run: docker build -t vetrax/multi-server ./server
       - run: docker build -t vetrax/multi-worker ./worker
 
-      - run: docker push vetrax/multi-worker ./client
-      - run: docker push vetrax/multi-worker ./nginx
-      - run: docker push vetrax/multi-worker ./server
-      - run: docker push vetrax/multi-worker ./worker
+      - run: docker push vetrax/multi-client
+      - run: docker push vetrax/multi-nginx
+      - run: docker push vetrax/multi-server
+      - run: docker push vetrax/multi-worker
